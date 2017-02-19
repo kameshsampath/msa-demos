@@ -1,7 +1,7 @@
 ---
 buildName: "simple-calculator-springboot"
 links:
-  Git: "https://github.com/kameshsampath/msa-demos.git"
+  Git: "https://github.com/kameshsampath/simple-calculator-springboot.git"
   Job: "http://jenkins.default.192.168.64.16.nip.io/job/simple-calculator-springboot"
   Production: "http://172.30.67.158:80/kubernetes/pods?namespace=default-prod"
   Staging: "http://172.30.67.158:80/kubernetes/pods?namespace=default-staging"
