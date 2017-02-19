@@ -1,0 +1,40 @@
+= Calculator REST Client
+
+A REST Java client Utility for Calculator spring boot demo that uses Kubernetes service discovery to perform REST calls to the services.  The
+application uses the http://vertx.io/docs/vertx-service-discovery-bridge-kubernetes[Vert.x Kubernetes Bridge] to perform the Service Discovery
+and store them in the Vert.x service registry.
+
+== How to build
+
+To build the application execute the following command,
+
+```
+mvn clean install
+
+```
+
+TIP: The command also generates the Kubernetes resources using the https://maven.fabric8.io[fabric8 maven plugin] you can
+find the same in `${project.build.dir}/classes/META-INF` and corresponding https://github.com/kubernetes/helm[helm charts]
+are available in `${project.build.dir}/fabric8/helm`
+
+== Demo Java App
+
+To test the client with simple-calculator-spring spring boot application, you can deploy the app using the steps described
+below.
+
+== Deploy
+
+You can deploy the project to your Kubernetes environment using command
+
+```
+mvn clean install fabric8:deploy
+```
+
+== UnDeploy
+
+You can deploy the project to your Kubernetes environment using command
+
+```
+mvn clean install fabric8:undeploy
+```
+

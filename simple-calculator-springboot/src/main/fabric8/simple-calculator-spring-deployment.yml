@@ -1,0 +1,15 @@
+spec:
+  template:
+    spec:
+      containers:
+      - env:
+        - name: EXPOSE_URL
+          valueFrom:
+            configMapKeyRef:
+              key: "simple-calculator-spring--swagger-url"
+              name: "${fabric8.service.name}"
+        - name: SWAGGER_HOST
+          valueFrom:
+            configMapKeyRef:
+              key: "simple-calculator-spring--swagger-host"
+              name: "${fabric8.service.name}"

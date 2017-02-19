@@ -1,0 +1,26 @@
+== Microservices with Spring Boot
+
+A very trival, simple calculator microservice demo application build using [spring-boot](http://projects.spring.io/spring-boot/). The
+sample application provides a [swagger](http://swagger.io/) representation of the services.
+
+=== Build and running the service with Docker
+
+This applications uses the [s2i](https://github.com/openshift/source-to-image/releases) to build the docker
+image from sources.  To build and run the application follow the steps below,
+
+ 1. Download https://github.com/openshift/source-to-image/releases[s2i] and add it to the path
+ 2. run the following command
+   [code]
+   s2i build https://github.com/kameshsampath/microservice-demos/simple-calculator -e "artifactId=simple-calculator" kameshsampath/microservice-java-s2i msa-simplecalc-app`
+
+ 3. the step#2 would build a docker image called `msa-simplecalc-app`, use `docker run -p 8080:8080 msa-simplecalc-app`
+ 4. Access http://localhost:8080[swagger ui] to access the available REST endpoints and test the app
+
+== LICENSE
+Copyright 2016 Kamesh Sampath
+
+Licensed under http://www.apache.org/licenses/LICENSE-2.0.html[ASL v2.0]
+
+== References
+* https://github.com/openshift/source-to-image/releases[s2i]
+* http://projects.spring.io/spring-boot/[spring-boot]

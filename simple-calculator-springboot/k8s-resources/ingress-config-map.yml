@@ -1,0 +1,8 @@
+apiVersion: "v1"
+data:
+  config.yml: |-
+    exposer: "Ingress"
+    domain: "replace.me.io"
+kind: "ConfigMap"
+metadata:
+  name: "exposecontroller"
